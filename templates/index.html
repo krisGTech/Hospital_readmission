@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Kris Ghimire</a></li>
+          </ul>
+    
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Kris Ghimire</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+
+          <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+              <br><br>
+              <h1 class="header center orange-text">Hospital Readmission Prediction</h1>
+              <div class="row center">
+                <h5 class="header col s12 light">Enter Patient Data To Predict The Probability Of Readmission
+                <br>
+                </h5>
+              </div>
+              <div class="row">
+                <form action='/predict' method="POST" class="col s12">
+                  <div class="row">
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>Number Of Inpatient Visit</b></label>
+                        <br>
+                      <input placeholder="How many in patient visit?" name="a" id="first_name" type="text" class="validate">
+                    </div>
+                    <div class="input-field col s4">
+                      <label for="last_name"><b>Num Of Medications </b></label>
+                        <br>
+                      <input id="last_name" name="b" placeholder="Enter num of Med your taking "  type="text" class="validate">
+            
+                    </div>
+            
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Num Of Lab Procedures</b></label>
+                        <br>
+                      <input id="_name" name="c" placeholder="Enter Num of lab procedures done" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Discharge Disposition Type Expired?</b></label>
+                        <br>
+                      <input id="_name" name="d" placeholder=" Enter Yes as 1 No as 0 " type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Time In Hospital</b></label>
+                        <br>
+                      <input id="_name" name="e" placeholder="How long been in hospital" type="text" class="validate">
+            
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Number Of Diagnoses</b></label>
+                        <br>
+                      <input id="_name" name="f" placeholder="How many diagnosis you had?" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Number Of ER Visit</b></label>
+                        <br>
+                      <input id="_name" name="g" placeholder="Number of ER viist you had?" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Transferred To Another Rehab ?</b></label>
+                        <br>
+                      <input id="_name" name="h" placeholder="Enter Yes as 1 No as 0" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Discharged To Home?</b></label>
+                        <br>
+                      <input id="_name" name="i" placeholder="Enter Yes as 1 No as 0" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Number  Of Other Procedures</b></label>
+                        <br>
+                      <input id="_name" name="j" placeholder="Enter Num of Other Procedure Done" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Number Of Outpatient</b></label>
+                        <br>
+                      <input id="_name" name="k" placeholder="Enter Num Of Outpatient Visit" type="text" class="validate">
+                    </div>
+
+                    <div class="input-field col s4">
+                        <label for="_name"><b>Transfer To SNF?</b></label>
+                        <br>
+                      <input id="_name" name="l" placeholder="Enter Yes as 1 and No as 0" type="text" class="validate">
+                    </div>
+            
+                  </div>
+            
+                  <div class="row center">
+            
+                      <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+                  </div>
+                </form>
+                
+                  </div>
+                  <h3 align='center'<b>{{pred}}</b></h3>
+                  
+                 
+            </div>
+          </div>
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+</body>
